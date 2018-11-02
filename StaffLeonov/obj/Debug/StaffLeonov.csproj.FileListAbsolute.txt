@@ -1,0 +1,16 @@
+C:\StaffLeonov\StaffLeonov\bin\Debug\StaffLeonov.exe.config
+C:\StaffLeonov\StaffLeonov\bin\Debug\StaffLeonov.exe
+C:\StaffLeonov\StaffLeonov\bin\Debug\StaffLeonov.pdb
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.csprojAssemblyReference.cache
+C:\StaffLeonov\StaffLeonov\obj\Debug\MainWindow.g.cs
+C:\StaffLeonov\StaffLeonov\obj\Debug\App.g.cs
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov_MarkupCompile.cache
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov_MarkupCompile.lref
+C:\StaffLeonov\StaffLeonov\obj\Debug\MainWindow.baml
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.g.resources
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.Properties.Resources.resources
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.csproj.GenerateResource.cache
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.csproj.CoreCompileInputs.cache
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.exe
+C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.pdb
+C:\StaffLeonov\StaffLeonov\obj\Debug\GeneratedInternalTypeHelper.g.cs
