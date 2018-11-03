@@ -6,8 +6,8 @@
          xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:StaffLeonov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="842"
-        Name="mainWindow">
+        Title="MainWindow"
+        Name="mainWindow" Width="389">
     <Window.Resources>
         <DataTemplate DataType="{x:Type local:Department}">
             <StackPanel Orientation="Horizontal">
@@ -15,47 +15,52 @@
                 <TextBlock Text=" Руководитель -"/>
                 <TextBlock Text="{Binding DepartmentHead}"/>
             </StackPanel>
-        
-    
+
+
         </DataTemplate>
     </Window.Resources>
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="0,0,2,-3" RenderTransformOrigin="0.291,0.495">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="128*"/>
-            <ColumnDefinition Width="135*"/>
+
+
+
+
+
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="274*"/>
+
+
+
+
+
         </Grid.ColumnDefinitions>
-       
-        <ListView HorizontalAlignment="Left" 
-                  Height="362" Margin="10,32,0,0" 
-                  x:Name="lv"
-                  VerticalAlignment="Top" 
-                  Width="395" SelectionChanged="lv_SelectionChanged"
+
+        <ListView Margin="10,32,10,10" 
+                  x:Name="lv" SelectionChanged="lv_SelectionChanged" RenderTransformOrigin="1.007,0.501" Grid.ColumnSpan="2" MouseRightButtonUp="lv_MouseRightButtonUp"
                   
                   >
 
             <ListView.View>
-                
-                    <GridView>
-                    
-                        <GridViewColumn  Width="50" 
+
+                <GridView>
+
+                    <GridViewColumn  Width="50" 
                                      Header="Id" 
                                      DisplayMemberBinding="{Binding Number}"/>
                     <GridViewColumn  Width="100" Header="Фамилия" DisplayMemberBinding="{Binding LastName}" />
                     <GridViewColumn  Width="100" Header="Имя" DisplayMemberBinding="{Binding FirstName}" />
                     <GridViewColumn  Width="100" Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" />
-                    
+
                 </GridView>
-              
+
             </ListView.View>
         </ListView>
-        
-        <ComboBox x:Name="comboBox"
-                  HorizontalAlignment="Left" 
-                  Margin="10,10,0,0" 
-                  VerticalAlignment="Top" 
-                  Width="395" Height="22" 
+
+        <ComboBox x:Name="comboBox" 
+                  Margin="10,10,10,0" 
+                  VerticalAlignment="Top" Height="22" Grid.ColumnSpan="2" MouseRightButtonUp="comboBox_MouseRightButtonUp" 
                   />
-        
+
 
     </Grid>
 </Window>
