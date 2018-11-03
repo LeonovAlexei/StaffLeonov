@@ -36,7 +36,7 @@
         </Grid.ColumnDefinitions>
 
         <ListView Margin="10,32,10,10" 
-                  x:Name="lv" SelectionChanged="lv_SelectionChanged" RenderTransformOrigin="1.007,0.501" Grid.ColumnSpan="2" MouseRightButtonUp="lv_MouseRightButtonUp"
+                  x:Name="lv" RenderTransformOrigin="1.007,0.501" Grid.ColumnSpan="2" MouseRightButtonUp="lv_MouseRightButtonUp"
                   
                   >
 

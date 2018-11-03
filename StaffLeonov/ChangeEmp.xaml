@@ -5,8 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StaffLeonov"
         mc:Ignorable="d"
-        Title="ChangeEmp" Height="450" Width="800">
+        Title="ChangeEmp" Height="480" Width="800" AutomationProperties.IsOffscreenBehavior="Offscreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Табельный номер" 
+               Grid.Column="1" 
+               Grid.Row="1" 
+               HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center" 
+               />
+
+        <TextBox x:Name="NumberEmpl" Grid.Column="1"  
+                 Text="TextBox" 
+                 Grid.Row="2" 
+                 HorizontalContentAlignment="Center" 
+                 VerticalContentAlignment="Center" />
+        <Border BorderBrush="Black" 
+                BorderThickness="3" 
+                Grid.Column="1"
+                Grid.ColumnSpan="1"
+                Grid.Row="1" 
+                Grid.RowSpan="2" 
+                
+                />
+        <Label Content="Фамиия" Grid.Column="1"  Grid.Row="4"/>
+        <Label Content="Имя" Grid.Column="1" Grid.Row="5"/>
+        <Label Content="Отчество" Grid.Column="1" Grid.Row="6"/>
+        <Label Content="Дата рождения" Grid.Column="1" Grid.Row="8"  />
+        <Label Content="Паспорт :" Grid.Column="1" Grid.Row="10"   />
+        <Label Content="Серия и номер :" Grid.Column="1" Grid.Row="11" />
+        <Label Content="Кем выдан :" Grid.Column="1" Grid.Row="12"  />
+        <Label Content="Дата выдачи :" Grid.Column="1" Grid.Row="13"    />
+        <Label Content="Место рождения :" Grid.Column="1" Grid.Row="14"    />
+        <Label Content="Адрес проживания :" Grid.Column="1" Grid.Row="16"   />
+        <Label Content="Свидетельство ПС :" Grid.Column="1" Grid.Row="17"    />
+        <TextBox Grid.Column="2" Grid.Row="4" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="5" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="6" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="8" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="11" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="12" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="13" Text="TextBox"  />
+        <TextBox Grid.Column="2" Grid.Row="14" Text="ст.Гривенская, Красноармейский район, Краснодарский Край" Grid.ColumnSpan="4"   />
+        <TextBox Grid.Column="2" Grid.Row="16" Text="г. Краснодар, ул. Ставропольская, д.22, корп. Б, кв. 181" Grid.ColumnSpan="4"  />
+        <TextBox Grid.Column="2" Grid.Row="17" Text="TextBox"  />
+        <ComboBox Grid.Column="6" Grid.Row="5"   />
+        <Label Content="Подразделение  :" Grid.Column="5"  Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,6,132,0"   />
+        <Label Content="Наименование  :" Grid.Column="4"  Grid.Row="5"  Grid.ColumnSpan="2" />
+        <Label Content="Номер телефона отдела" Grid.Column="4"  Grid.Row="6"   Grid.ColumnSpan="2"/>
+        <Label Content="Руководитель отдела" Grid.Column="4" Grid.Row="1"/>
+        <CheckBox Content="CheckBox" Grid.Column="5"  Grid.Row="1" />
+        <Label Content="Номер  :" Grid.Column="4"  Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="Руководитель отдела" Grid.Column="4"  Grid.Row="8" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="6" Grid.Row="4" Text="Номер отдела"  />
+        <TextBox Grid.Column="6" Grid.Row="6" Text="Номер телефона отдела" />
+        <TextBox Grid.Column="6" Grid.Row="8" Text="Кто руководитель отдела" />
+
+
     </Grid>
 </Window>
