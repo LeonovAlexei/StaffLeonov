@@ -59,7 +59,7 @@
                 Grid.RowSpan="2" 
                 
                 />
-        <Label Content="Фамиия" Grid.Column="1"  Grid.Row="4"/>
+        <Label Content="Фамилия" Grid.Column="1"  Grid.Row="4"/>
         <Label Content="Имя" Grid.Column="1" Grid.Row="5"/>
         <Label Content="Отчество" Grid.Column="1" Grid.Row="6"/>
         <Label Content="Дата рождения" Grid.Column="1" Grid.Row="8"  />
@@ -91,6 +91,9 @@
         <TextBox Grid.Column="6" Grid.Row="4" Text="Номер отдела"  />
         <TextBox Grid.Column="6" Grid.Row="6" Text="Номер телефона отдела" />
         <TextBox Grid.Column="6" Grid.Row="8" Text="Кто руководитель отдела" />
+        <Button Content="Изменить" Grid.Column="7"  Grid.Row="11"   />
+        <Button Content="Сохранить" Grid.Column="7" Grid.Row="16"  />
+        <Button Content="Удалить" Grid.Column="7"  Grid.Row="13" />
 
 
     </Grid>

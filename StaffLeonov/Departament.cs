@@ -36,9 +36,7 @@ namespace StaffLeonov
                 try
                 {
                     string[] s = sr.ReadLine().Split('\t');
-
                     departments.Add(new Department(int.Parse(s[0]), s[1], s[2], s[3]));
-
                 }
                 catch (Exception e)
                 {
