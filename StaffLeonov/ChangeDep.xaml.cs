@@ -22,6 +22,7 @@ namespace StaffLeonov
         public ChangeDep()
         {
             InitializeComponent();
+           this.gridChangeDep.DataContext = Department.departments;
         }
 
         
