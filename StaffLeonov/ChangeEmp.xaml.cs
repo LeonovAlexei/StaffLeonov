@@ -17,13 +17,15 @@ namespace StaffLeonov
     /// <summary>
     /// Логика взаимодействия для ChangeEmp.xaml
     /// </summary>
-    public partial class ChangeEmp : Window
+     partial class ChangeEmp : Window
     {
-        public ChangeEmp()
+        
+         ChangeEmp(Employee e)
         {
             InitializeComponent();
+            changeEmpGrid.DataContext = e;
+            //CBChangeEmp.ItemsSource = Department.Departments;
         }
 
-        
     }
 }

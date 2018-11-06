@@ -29,10 +29,12 @@
                 <GridView>
                     <GridViewColumn  Width="50" 
                                      Header="Id" 
-                                     DisplayMemberBinding="{Binding Number}"/>
-                    <GridViewColumn  Width="100" Header="Фамилия" DisplayMemberBinding="{Binding LastName}" />
-                    <GridViewColumn  Width="100" Header="Имя" DisplayMemberBinding="{Binding FirstName}" />
-                    <GridViewColumn  Width="100" Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" />
+                                     x:Name="txtNumber"
+                                     <!--DisplayMemberBinding="{Binding txtNumber}"-->
+                                     />
+                    <GridViewColumn  x:Name="txtNumber" Width="100" Header="Фамилия" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn  x:Name="txtNumber" Width="100" Header="Имя" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn  x:Name="txtNumber"Width="100" Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" />
                 </GridView>
             </ListView.View>
         </ListView>

@@ -77,14 +77,20 @@
     <Compile Include="ChangeEmp.xaml.cs">
       <DependentUpon>ChangeEmp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Departament.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentBook.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeBook.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="IViewMw.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

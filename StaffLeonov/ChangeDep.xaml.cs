@@ -19,11 +19,13 @@ namespace StaffLeonov
     /// </summary>
     public partial class ChangeDep : Window
     {
-        public ChangeDep()
+        public ChangeDep(Department e)
         {
             InitializeComponent();
+            changeDepGrid.DataContext = e;
+           // CBChangeDep.ItemsSource = model.CurrentEmployee;
         }
 
-        
+
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StaffLeonov"
         mc:Ignorable="d"
         Title="ChangeDep" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="changeDepGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="90*"/>
@@ -36,12 +36,23 @@
         <Button Content="Изменить" Grid.Column="5" Grid.Row="4" />
         <Button Content="Удалить" Grid.Column="5" Grid.Row="6"/>
         <Button Content="Сохранить" Grid.Column="5"  Grid.Row="8"/>
-        <TextBox Grid.Column="3" Grid.Row="2"  Text="Номер отдела"/>
-        <TextBox Grid.Column="3" Grid.Row="4" Text="Наименование"/>
-        <TextBox Grid.Column="3" Grid.Row="6" Text="телефон" />
-        <ComboBox Grid.Column="3" Grid.Row="8" Text="руководитель" />
+        <TextBox Grid.Column="3" Grid.Row="2"  Text="{Binding DepartmentNumber}"/>
+        <TextBox Grid.Column="3" Grid.Row="4" Text="{Binding DepartmentName}"/>
+        <TextBox Grid.Column="3" Grid.Row="6" Text="{Binding DepartmentPhoneNumber}" />
+        <ComboBox x:Name="CBChangeDep" Grid.Column="3" Grid.Row="8" Text="{Binding DepartmentHead}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding LastName}"/>
+                    <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding FirstName}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding Patronymic}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
 
-
+        </ComboBox> 
 
     </Grid>
 </Window>
