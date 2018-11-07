@@ -22,6 +22,9 @@ namespace StaffLeonov
         public ChangeEmp()
         {
             InitializeComponent();
+            gridChangeEmp.DataContext = Employee.colempl; 
+
+            this.CBChangeEmp.ItemsSource = Department.departments;
         }
 
         

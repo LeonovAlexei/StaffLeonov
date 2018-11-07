@@ -1,0 +1,2 @@
+﻿INSERT INTO Address (IdAddress, idAddressType,Address,IdEmployee) VALUES ('1', '1',N'г.Краснодар, ул благоева 23 кв12','20')
+--INSERT INTO AddressType (idAddressType, NameAddressType) VALUES ('2', N'Рождения')

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StaffLeonov"
         mc:Ignorable="d"
         Title="ChangeEmp" Height="480" Width="800" AutomationProperties.IsOffscreenBehavior="Offscreen">
-    <Grid>
+    <Grid x:Name="gridChangeEmp">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="120*"/>
@@ -47,7 +47,7 @@
                />
 
         <TextBox x:Name="NumberEmpl" Grid.Column="1"  
-                 Text="TextBox" 
+                 Text="{Binding Number}" 
                  Grid.Row="2" 
                  HorizontalContentAlignment="Center" 
                  VerticalContentAlignment="Center" />
@@ -80,7 +80,16 @@
         <TextBox Grid.Column="2" Grid.Row="14" Text="ст.Гривенская, Красноармейский район, Краснодарский Край" Grid.ColumnSpan="4"   />
         <TextBox Grid.Column="2" Grid.Row="16" Text="г. Краснодар, ул. Ставропольская, д.22, корп. Б, кв. 181" Grid.ColumnSpan="4"  />
         <TextBox Grid.Column="2" Grid.Row="17" Text="TextBox"  />
-        <ComboBox Grid.Column="6" Grid.Row="5"   />
+        <ComboBox x:Name="CBChangeEmp" Grid.Column="6" Grid.Row="5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    
+                        <TextBlock Text="{Binding DepartmentName}"/>
+                        
+                   
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>   
         <Label Content="Подразделение  :" Grid.Column="5"  Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3,6,132,0"   />
         <Label Content="Наименование  :" Grid.Column="4"  Grid.Row="5"  Grid.ColumnSpan="2" />
         <Label Content="Номер телефона отдела" Grid.Column="4"  Grid.Row="6"   Grid.ColumnSpan="2"/>

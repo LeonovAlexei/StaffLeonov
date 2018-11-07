@@ -35,8 +35,12 @@ namespace StaffLeonov
 
            this.comboBox.ItemsSource = Department.departments;
             lv.ItemsSource = Employee.colempl;
+
+            //Строка подключения StaffConnectionString Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = StaffLeonov; Integrated Security = True; Pooling = False
+
+
         }
-        
+
         private void lv_Selected(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show(e.Source.ToString());

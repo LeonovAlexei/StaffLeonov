@@ -23,7 +23,8 @@
             <ColumnDefinition Width="274*"/>
         </Grid.ColumnDefinitions>
         <ListView Margin="10,32,10,10" 
-                  x:Name="lv" RenderTransformOrigin="1.007,0.501" Grid.ColumnSpan="2" MouseRightButtonUp="lv_MouseRightButtonUp"
+                  x:Name="lv" RenderTransformOrigin="1.007,0.501" 
+                  Grid.ColumnSpan="2" MouseRightButtonUp="lv_MouseRightButtonUp"
                   >
             <ListView.View>
                 <GridView>
@@ -38,7 +39,8 @@
         </ListView>
         <ComboBox x:Name="comboBox" 
                   Margin="10,10,10,0" 
-                  VerticalAlignment="Top" Height="22" Grid.ColumnSpan="2" MouseRightButtonUp="comboBox_MouseRightButtonUp" 
+                  VerticalAlignment="Top" 
+                  Height="22" Grid.ColumnSpan="2" MouseRightButtonUp="comboBox_MouseRightButtonUp" 
                   />
     </Grid>
 </Window>
