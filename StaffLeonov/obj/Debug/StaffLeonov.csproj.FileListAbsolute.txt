@@ -13,7 +13,6 @@ C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.csproj.GenerateResource.cache
 C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.csproj.CoreCompileInputs.cache
 C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.exe
 C:\StaffLeonov\StaffLeonov\obj\Debug\StaffLeonov.pdb
-C:\StaffLeonov\StaffLeonov\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\StaffLeonov\StaffLeonov\obj\Debug\ChangeDep.g.cs
 C:\StaffLeonov\StaffLeonov\obj\Debug\ChangeEmp.g.cs
 C:\StaffLeonov\StaffLeonov\obj\Debug\ChangeDep.baml

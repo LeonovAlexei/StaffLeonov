@@ -1,8 +1,8 @@
 ﻿SELECT
 *
-FROM Address 
+FROM --Address 
 -- Passports
 
---Employee
+Employee
 --Departments
 --AddressType
