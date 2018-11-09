@@ -15,20 +15,12 @@ namespace StaffLeonov
         SqlConnection connection;
         SqlDataAdapter adapter;
         DataSet ds;
-        DataTable tblEmployee;
-        DataTable tblDiparments;
-
+        DataTable tblEmployee, tblAddress, tblDepartments, tblDepartmentsGrid, tblAddressType, tblPassports;
+        
         public MainWindow()
         {
             InitializeComponent();
-      
-            string sql = "SELECT IdEmployee, LastName, FirstName, Patronymic FROM Employee;SELECT (Employee.LastName) +(' ')+(Employee.FirstName)+(' ') + (Employee.Patronymic)AS DepartmentHead,Departments.IdDepartment,DepartmentName, DepartmentPhoneNumber FROM Departments, Employee WHERE Departments.DepartmentHead=Employee.IdEmployee";
-            //string sql = "SELECT IdEmployee, LastName, FirstName, Patronymic FROM Employee";
-            //string sqld = 
-            
-           
-        
-            
+  
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -46,25 +38,33 @@ namespace StaffLeonov
                 "(Employee.FirstName) + (' ') + (Employee.Patronymic)AS DepartmentHead," +
                 "Departments.IdDepartment,DepartmentName, DepartmentPhoneNumber FROM Departments, " +
                 "Employee WHERE Departments.DepartmentHead = Employee.IdEmployee";
-            adapter.Fill(ds, "tblDiparments");
-            //"SELECT IdEmployee, LastName, FirstName, Patronymic, Birthday FROM Employee"
+            adapter.Fill(ds, "tblDepartmentsGrid");
+            command.CommandText = "SELECT * FROM Address";
+            adapter.Fill(ds, "tblAddress");
+            command.CommandText = "SELECT * FROM AddressType";
+            adapter.Fill(ds, "tblAddressType");
+            command.CommandText = "SELECT * FROM Passports";
+            adapter.Fill(ds, "tblPassports");
+            command.CommandText = "SELECT * FROM Departments";
+            adapter.Fill(ds, "tblDepartments");
+                      
             adapter.SelectCommand = command;
 
-            //            //insert
-            //            command = new SqlCommand(@"INSERT INTO Employee (IdEmployee, LastName, FirstName, Patronymic) 
+            ////insert
+            //command = new SqlCommand(@"INSERT INTO Employee (IdEmployee, LastName, FirstName, Patronymic) 
             //                          VALUES (@IdEmployee, @LastName, @FirstName, @Patronymic); SET @IdEmployee = @@IDENTITY;",
-            //                          connection);
+            //              connection);
 
-            //            command.Parameters.Add("@IdEmployee", SqlDbType.NVarChar, -1, "IdEmployee");
-            //            command.Parameters.Add("@LastName", SqlDbType.NVarChar, -1, "LastName");
-            //            command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 58, "FirstName");
-            //            command.Parameters.Add("@Patronymic", SqlDbType.NVarChar, -1, "Patronymic");
+            //command.Parameters.Add("@IdEmployee", SqlDbType.NVarChar, -1, "IdEmployee");
+            //command.Parameters.Add("@LastName", SqlDbType.NVarChar, -1, "LastName");
+            //command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 58, "FirstName");
+            //command.Parameters.Add("@Patronymic", SqlDbType.NVarChar, -1, "Patronymic");
 
-            //            SqlParameter param = command.Parameters.Add("@IdEmployee", SqlDbType.Int, 0, "IdEmployee");
+            //SqlParameter param = command.Parameters.Add("@IdEmployee", SqlDbType.Int, 0, "IdEmployee");
 
-            //            param.Direction = ParameterDirection.Output;
+            //param.Direction = ParameterDirection.Output;
 
-            //            adapter.InsertCommand = command;
+            //adapter.InsertCommand = command;
 
             //            // update
             //            command = new SqlCommand(@"UPDATE People SET FIO = @FIO,
@@ -87,12 +87,18 @@ namespace StaffLeonov
 
             // 
 
-            DataTable tblEmployee = ds.Tables["tblEmployee"];
-            DataTable tblDiparments = ds.Tables["tblDiparments"];
+            tblEmployee = ds.Tables["tblEmployee"];
+            tblDepartmentsGrid = ds.Tables["tblDepartmentsGrid"];
+            tblDepartments = ds.Tables["tblDepartments"];
+            tblAddress = ds.Tables["tblAddress"];
+            tblAddressType = ds.Tables["tblAddressType"];
+            tblPassports = ds.Tables["tblPassports"];
+            
+
 
             employeeDataGrid.DataContext = tblEmployee.DefaultView;
-            departmmentsDataGrid.DataContext = tblDiparments;
-            cBox.ItemsSource = tblDiparments.DefaultView;
+            departmentsDataGrid.DataContext = tblDepartmentsGrid;
+            cBox.ItemsSource = tblDepartments.DefaultView;
 
 
             //adapter.Fill(dt);
@@ -114,12 +120,12 @@ namespace StaffLeonov
             // добавим новую строку
             DataRow newRow = tblEmployee.NewRow();
             ChangeEmp changeEmp = new ChangeEmp(newRow);
-            editWindow.ShowDialog();
+            changeEmp.ShowDialog();
 
-            if (editWindow.DialogResult.Value)
+            if (changeEmp.DialogResult.Value)
             {
-                dt.Rows.Add(editWindow.resultRow);
-                adapter.Update(dt);
+                tblEmployee.Rows.Add(changeEmp.resultRow);
+                adapter.Update(tblEmployee);
             }
         }
     }

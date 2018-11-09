@@ -48,8 +48,8 @@
                VerticalContentAlignment="Center" 
                />
 
-        <TextBox x:Name="numberEmpl" Grid.Column="1"  
-                 Text="{Binding Number}" 
+        <TextBox x:Name="idEmployee" Grid.Column="1"  
+                 Text="{Binding IdEmployee}" 
                  Grid.Row="2" 
                  HorizontalContentAlignment="Center" 
                  VerticalContentAlignment="Center" />

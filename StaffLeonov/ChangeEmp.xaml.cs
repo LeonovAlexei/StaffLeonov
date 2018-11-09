@@ -28,7 +28,7 @@ namespace StaffLeonov
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            numberEmpl.Text = resultRow["NumberEmpl"].ToString();
+            idEmployee.Text = resultRow["IdEmployee"].ToString();
             lastName.Text = resultRow["LastName"].ToString();
             firstName.Text = resultRow["FirstName"].ToString();
             patronymic.Text = resultRow["Patronymic"].ToString();
