@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Data;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -19,12 +20,19 @@ namespace StaffLeonov
     /// </summary>
     public partial class ChangeEmp : Window
     {
-        public ChangeEmp()
+        public DataRow resultRow { get; set; }
+        public ChangeEmp(DataRow dataRow)
         {
             InitializeComponent();
-           
+            resultRow = dataRow;
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            numberEmpl.Text = resultRow["NumberEmpl"].ToString();
+            lastName.Text = resultRow["LastName"].ToString();
+            firstName.Text = resultRow["FirstName"].ToString();
+            patronymic.Text = resultRow["Patronymic"].ToString();
         }
 
-        
     }
 }

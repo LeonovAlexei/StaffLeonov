@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StaffLeonov"
         mc:Ignorable="d"
-        Title="ChangeEmp" Height="480" Width="800" AutomationProperties.IsOffscreenBehavior="Offscreen">
+        Title="ChangeEmp" Height="480" Width="800" 
+        Loaded="Window_Loaded"
+        AutomationProperties.IsOffscreenBehavior="Offscreen">
     <Grid x:Name="gridChangeEmp">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
@@ -46,7 +48,7 @@
                VerticalContentAlignment="Center" 
                />
 
-        <TextBox x:Name="NumberEmpl" Grid.Column="1"  
+        <TextBox x:Name="numberEmpl" Grid.Column="1"  
                  Text="{Binding Number}" 
                  Grid.Row="2" 
                  HorizontalContentAlignment="Center" 
@@ -70,16 +72,16 @@
         <Label Content="Место рождения :" Grid.Column="1" Grid.Row="14"    />
         <Label Content="Адрес проживания :" Grid.Column="1" Grid.Row="16"   />
         <Label Content="Свидетельство ПС :" Grid.Column="1" Grid.Row="17"    />
-        <TextBox Grid.Column="2" Grid.Row="4" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="5" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="6" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="8" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="11" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="12" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="13" Text="TextBox"  />
-        <TextBox Grid.Column="2" Grid.Row="14" Text="ст.Гривенская, Красноармейский район, Краснодарский Край" Grid.ColumnSpan="4"   />
-        <TextBox Grid.Column="2" Grid.Row="16" Text="г. Краснодар, ул. Ставропольская, д.22, корп. Б, кв. 181" Grid.ColumnSpan="4"  />
-        <TextBox Grid.Column="2" Grid.Row="17" Text="TextBox"  />
+        <TextBox x:Name="lastName" Grid.Column="2" Grid.Row="4" Text="TextBox"  />
+        <TextBox x:Name="firstName" Grid.Column="2" Grid.Row="5" Text="TextBox"  />
+        <TextBox x:Name="patronymic" Grid.Column="2" Grid.Row="6" Text="TextBox"  />
+        <TextBox x:Name="Birthday" Grid.Column="2" Grid.Row="8" Text="TextBox"  />
+        <TextBox x:Name="passportSerNum" Grid.Column="2" Grid.Row="11" Text="TextBox"  />
+        <TextBox x:Name="passporIssuedBy" Grid.Column="2" Grid.Row="12" Text="TextBox"  />
+        <TextBox x:Name="passportDateOfIssue" Grid.Column="2" Grid.Row="13" Text="TextBox"  />
+        <TextBox x:Name="addressT1" Grid.Column="2" Grid.Row="14" Text="ст.Гривенская, Красноармейский район, Краснодарский Край" Grid.ColumnSpan="4"   />
+        <TextBox x:Name="addressT2" Grid.Column="2" Grid.Row="16" Text="г. Краснодар, ул. Ставропольская, д.22, корп. Б, кв. 181" Grid.ColumnSpan="4"  />
+        <TextBox x:Name="policyNumber" Grid.Column="2" Grid.Row="17" Text="TextBox"  />
         <ComboBox x:Name="CBChangeEmp" Grid.Column="6" Grid.Row="5">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -97,12 +99,11 @@
         <CheckBox Content="CheckBox" Grid.Column="5"  Grid.Row="1" />
         <Label Content="Номер  :" Grid.Column="4"  Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <Label Content="Руководитель отдела" Grid.Column="4"  Grid.Row="8" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="6" Grid.Row="4" Text="Номер отдела"  />
-        <TextBox Grid.Column="6" Grid.Row="6" Text="Номер телефона отдела" />
-        <TextBox Grid.Column="6" Grid.Row="8" Text="Кто руководитель отдела" />
-        <Button Content="Изменить" Grid.Column="7"  Grid.Row="11"   />
-        <Button Content="Сохранить" Grid.Column="7" Grid.Row="16"  />
-        <Button Content="Удалить" Grid.Column="7"  Grid.Row="13" />
+        <TextBox x:Name="idDepartment" Grid.Column="6" Grid.Row="4" Text="Номер отдела"  />
+        <TextBox x:Name="departmentPhoneNumber" Grid.Column="6" Grid.Row="6" Text="Номер телефона отдела" />
+        <TextBox x:Name="departmentHead" Grid.Column="6" Grid.Row="8" Text="Кто руководитель отдела" />
+        <Button Content="Отмена" Grid.Column="7" Grid.Row="16"  />
+        <Button Content="Сохранить" Grid.Column="7"  Grid.Row="13" />
 
 
     </Grid>
