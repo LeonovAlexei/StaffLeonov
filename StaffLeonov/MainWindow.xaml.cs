@@ -50,21 +50,35 @@ namespace StaffLeonov
                       
             adapter.SelectCommand = command;
 
-            ////insert
-            //command = new SqlCommand(@"INSERT INTO Employee (IdEmployee, LastName, FirstName, Patronymic) 
-            //                          VALUES (@IdEmployee, @LastName, @FirstName, @Patronymic); SET @IdEmployee = @@IDENTITY;",
-            //              connection);
+            //insert
+            command = new SqlCommand(string.Empty, connection);
+            command.CommandText = @"INSERT INTO Employee ( LastName, FirstName, Patronymic,Birthday, PolicyNumber) 
+                                  VALUES (@LastName, @FirstName, @Patronymic,@Birthday, @PolicyNumber); 
+                                  SET @IdEmployee = @@IDENTITY;";
+            
+            command.Parameters.Add("@LastName", SqlDbType.NVarChar, -1, "LastName");
+            command.Parameters.Add("@FirstName", SqlDbType.NVarChar, -1, "FirstName");
+            command.Parameters.Add("@Patronymic", SqlDbType.NVarChar, -1, "Patronymic");
+            command.Parameters.Add("@Birthday", SqlDbType.NVarChar, -1, "Birthday");
+            command.Parameters.Add("@PolicyNumber", SqlDbType.NVarChar, -1, "PolicyNumber");
+            SqlParameter paramIdEmployee = command.Parameters.Add("@IdEmployee", SqlDbType.Int, 0, "IdEmployee");
 
-            //command.Parameters.Add("@IdEmployee", SqlDbType.NVarChar, -1, "IdEmployee");
-            //command.Parameters.Add("@LastName", SqlDbType.NVarChar, -1, "LastName");
-            //command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 58, "FirstName");
-            //command.Parameters.Add("@Patronymic", SqlDbType.NVarChar, -1, "Patronymic");
+            command.CommandText = @"INSERT INTO Passports ( PassportSerNum, PassportDateOfIssue, PassporIssuedBy,IdEmployee) 
+                                  VALUES (@PassportSerNum, @PassportDateOfIssue, @PassporIssuedBy,@IdEmployee, @IdAddress); 
+                                  SET @IdPassport = @@IDENTITY;";
 
-            //SqlParameter param = command.Parameters.Add("@IdEmployee", SqlDbType.Int, 0, "IdEmployee");
+            command.Parameters.Add("@PassportSerNum", SqlDbType.NVarChar, -1, "PassportSerNum");
+            command.Parameters.Add("@PassportDateOfIssue", SqlDbType.NVarChar, -1, "PassportDateOfIssue");
+            command.Parameters.Add("@PassporIssuedBy", SqlDbType.NVarChar, -1, "PassporIssuedBy");
+            command.Parameters.Add("@IdEmployee", SqlDbType.NVarChar, -1, "IdEmployee");
+            
+            SqlParameter paramIdPassport = command.Parameters.Add("@IdPassport", SqlDbType.Int, 0, "IdPassport");
 
-            //param.Direction = ParameterDirection.Output;
 
-            //adapter.InsertCommand = command;
+            paramIdEmployee.Direction = ParameterDirection.Output;
+            paramIdPassport.Direction = ParameterDirection.Output;
+
+            adapter.InsertCommand = command;
 
             //            // update
             //            command = new SqlCommand(@"UPDATE People SET FIO = @FIO,
